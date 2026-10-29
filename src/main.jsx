@@ -10,6 +10,8 @@ import {
 import "./styles.css";
 import JobSearchHero from "./JobSearchHero";
 import MergedHero from "./MergedHero";
+import AboutPage from "./AboutPage";
+
 
 const Arrow = ({ diagonal = false }) => (
   <span aria-hidden="true" className="arrow">
@@ -36,7 +38,7 @@ function Brand({ light = false }) {
   );
 }
 
-export default Brand;
+
 
 const services = [
   {
@@ -117,18 +119,18 @@ function Header() {
         >
           {open ? "✕" : "☰"}
         </button>
-
-        <nav className={open ? "nav nav-open" : "nav"}>
+<nav className={open ? "nav nav-open" : "nav"}>
           <Link to="/" onClick={() => setOpen(false)}>
             Home
           </Link>
 
+<Link to="/JobSearchHero">Find Jobs</Link>
+  {/* <button className="bt" onClick={() => goToSection("services")}>Services</button> */}
 
         
           <Link to="/about" onClick={() => setOpen(false)}>
             About us
           </Link>
-
 
           <button
             className="nav-cta"
@@ -415,6 +417,310 @@ function About() {
   );
 }
 
+const featuredJobs = [
+  {
+    title: "Frontend Developer",
+    company: "Technology & Digital",
+    location: "Noida, India",
+    type: "Full-time",
+    icon: "⌘",
+  },
+  {
+    title: "UI/UX Designer",
+    company: "Creative & Design",
+    location: "Gurugram, India",
+    type: "Full-time",
+    icon: "✳",
+  },
+  {
+    title: "Marketing Executive",
+    company: "Marketing & Growth",
+    location: "Remote",
+    type: "Remote",
+    icon: "↗",
+  },
+];
+
+function FeaturedJobs() {
+  return (
+    <section className="section featured-jobs" id="jobs">
+      <div className="container">
+        <div className="section-heading">
+          <div>
+            <div className="eyebrow">
+              <span className="eyebrow-line" /> CAREER OPPORTUNITIES
+            </div>
+            <h2>
+              Find work that
+              <br />
+              <span>moves you forward.</span>
+            </h2>
+          </div>
+
+          <div className="section-heading-aside">
+            <p>
+              Your next opportunity could be closer than you think.
+              Explore roles that match your skills and ambitions.
+            </p>
+            <a href="#contact" className="text-link">
+              Find your next role <Arrow diagonal />
+            </a>
+          </div>
+        </div>
+
+        <div className="featured-job-grid">
+          {featuredJobs.map((job) => (
+            <article className="featured-job-card" key={job.title}>
+              <div className="job-card-top">
+                <span className="job-company-icon">{job.icon}</span>
+                <span className="job-status">Opportunity</span>
+              </div>
+
+              <p className="job-card-company">{job.company}</p>
+              <h3>{job.title}</h3>
+
+              <div className="job-meta">
+                <span>⌖ {job.location}</span>
+                <span>◷ {job.type}</span>
+              </div>
+
+              <a href="#contact" className="job-card-link">
+                Enquire about this role <Arrow diagonal />
+              </a>
+            </article>
+          ))}
+        </div>
+
+        <p className="demo-data-note">
+          These are demonstration listings. Replace them with verified
+          vacancies before publishing.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function AudienceSection() {
+  return (
+    <section className="section audience-section">
+      <div className="container">
+        <div className="eyebrow">
+          <span className="eyebrow-line" /> PEOPLE FIRST, ALWAYS
+        </div>
+
+        <h2 className="audience-title">
+          Different goals.
+          <br />
+          <span>One great connection.</span>
+        </h2>
+
+        <div className="audience-grid">
+          <article className="audience-card candidate-card">
+            <span className="audience-label">FOR CANDIDATES / 01</span>
+            <div className="audience-symbol">↗</div>
+
+            <h3>
+              Your next chapter
+              <br />
+              starts <em>here.</em>
+            </h3>
+
+            <p>
+              Discover opportunities that value your skills,
+              recognize your potential, and move your career forward.
+            </p>
+
+            <a href="#jobs" className="button button-dark">
+              Explore opportunities <Arrow diagonal />
+            </a>
+          </article>
+
+          <article
+            className="audience-card employer-card"
+            id="employers"
+          >
+            <span className="audience-label">FOR EMPLOYERS / 02</span>
+            <div className="audience-symbol">✳</div>
+
+            <h3>
+              Find your people.
+              <br />
+              Build something <em>great.</em>
+            </h3>
+
+            <p>
+              Connect with talent that understands your goals
+              and brings the right energy to your team.
+            </p>
+
+            <a href="#contact" className="button button-light">
+              Hire exceptional talent <Arrow diagonal />
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function BrandStatement() {
+  return (
+    <section className="brand-statement">
+      <div className="container">
+        <div className="eyebrow eyebrow-light">
+          <span className="eyebrow-line" /> PEOPLE. POTENTIAL. PURPOSE.
+        </div>
+
+        <h2>
+          The right people
+          <br />
+          make <em>everything</em>
+          <br />
+          possible.
+        </h2>
+
+        <div className="brand-statement-bottom">
+          <span>GOOD WORK STARTS WITH GOOD PEOPLE</span>
+          <span>✳</span>
+          <a href="#contact">
+            LET&apos;S MAKE THE CONNECTION <Arrow diagonal />
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Testimonials() {
+  const items = [
+    {
+      quote:
+        "The right recruitment experience starts with understanding people, not just job descriptions.",
+      name: "Employer testimonial",
+    },
+    {
+      quote:
+        "Finding the right opportunity is about discovering a place where your skills and ambitions can grow.",
+      name: "Candidate testimonial",
+    },
+    {
+      quote:
+        "Great connections come from clear communication, shared goals, and a people-first approach.",
+      name: "Recruitment experience",
+    },
+  ];
+
+  return (
+    <section className="section testimonials-section">
+      <div className="container">
+        <div className="section-heading">
+          <div>
+            <div className="eyebrow">
+              <span className="eyebrow-line" /> PEOPLE SAY IT BEST
+            </div>
+            <h2>
+              Better connections.
+              <br />
+              <span>Stronger relationships.</span>
+            </h2>
+          </div>
+        </div>
+
+        <div className="testimonial-grid">
+          {items.map((item) => (
+            <article className="testimonial-card" key={item.name}>
+              <span className="testimonial-mark">“</span>
+              <p>{item.quote}</p>
+              <div className="testimonial-person">
+                <span className="testimonial-avatar">✳</span>
+                <strong>{item.name}</strong>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <p className="demo-data-note">
+          Replace these illustrative testimonials with genuine customer
+          feedback before publishing.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function FAQ() {
+  const [active, setActive] = useState(0);
+
+  const questions = [
+    {
+      question: "How can Easy Recruiitz help employers?",
+      answer:
+        "We help businesses identify recruitment needs and connect with candidates whose skills align with their requirements.",
+    },
+    {
+      question: "How can I find job opportunities?",
+      answer:
+        "Explore available vacancies and contact our team to discuss suitable opportunities.",
+    },
+    {
+      question: "What recruitment services do you offer?",
+      answer:
+        "Our services include permanent staffing, executive search, contract staffing, and volume hiring.",
+    },
+    {
+      question: "How can I contact your team?",
+      answer:
+        "Use the contact form at the bottom of this page to tell us about your recruitment or career needs.",
+    },
+  ];
+
+  return (
+    <section className="section faq-section" id="faq">
+      <div className="container faq-grid">
+        <div>
+          <div className="eyebrow">
+            <span className="eyebrow-line" /> FREQUENTLY ASKED QUESTIONS
+          </div>
+
+          <h2>
+            Good to know.
+            <br />
+            <span>Before we connect.</span>
+          </h2>
+
+          <p>
+            Have another question? We&apos;d love to hear from you.
+          </p>
+
+          <a href="#contact" className="text-link">
+            Talk to our team <Arrow diagonal />
+          </a>
+        </div>
+
+        <div className="faq-list">
+          {questions.map((item, index) => (
+            <article className="faq-item" key={item.question}>
+              <button
+                className="faq-question"
+                aria-expanded={active === index}
+                onClick={() =>
+                  setActive(active === index ? -1 : index)
+                }
+              >
+                <span>{item.question}</span>
+                <span>{active === index ? "−" : "+"}</span>
+              </button>
+
+              {active === index && (
+                <p className="faq-answer">{item.answer}</p>
+              )}
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 function CTA() {
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({
@@ -568,23 +874,26 @@ function Footer() {
   );
 }
 
-import AboutPage from "./AboutPage";
 
 function HomePage() {
   return (
     <>
       <Header />
+
       <main>
         <Hero />
-                        {/* <JobSearchHero /> */}
-
-        {/* <MergedHero /> */}
+        <FeaturedJobs />
+        <AudienceSection />
         <IntroStrip />
         <Services />
         <Approach />
         <About />
+        <BrandStatement />
+        <Testimonials />
+        <FAQ />
         <CTA />
       </main>
+
       <Footer />
     </>
   );
@@ -606,22 +915,28 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutRoute />} />
+        <Route
+  path="/jobsearchhero"
+  element={
+    <>
+      <Header />
+      <JobSearchHero />
+      <Footer />
+    </>
+  }
+/>
       </Routes>
     </BrowserRouter>
   );
 }
 
-createRoot(document.getElementById("root")).render(
+
+const root = createRoot(document.getElementById("root"));
+
+root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
-
-createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-);
-
 
 
