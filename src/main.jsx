@@ -411,9 +411,9 @@ function About() {
             the team, and to the person behind the profile. Because the best
             connections go beyond a job description.
           </p>
-          <a href="#contact" className="text-link">
+          <Link to="/about" className="text-link">
             The story behind Easy Recruiitz <Arrow diagonal />
-          </a>
+          </Link>
           <div className="about-note">
             <span>✳</span>
             <p>
