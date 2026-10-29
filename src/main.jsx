@@ -45,25 +45,25 @@ const services = [
     no: "01",
     icon: "↗",
     title: "Permanent staffing",
-    text: "Build a team that moves your business forward, with people who fit the role and your culture.",
+    text: "Build a stronger workforce with professionals who bring the right skills, experience, and mindset. We help businesses identify suitable candidates, understand their requirements, and create connections designed to support long-term growth and team stability.",
   },
   {
     no: "02",
     icon: "✳",
     title: "Executive search",
-    text: "Find experienced leaders who bring clarity, momentum, and a fresh perspective.",
+    text: "Find experienced professionals and leaders who can help your organization move forward. We focus on understanding leadership requirements, business priorities, and company culture to help identify candidates capable of making a meaningful contribution.",
   },
   {
     no: "03",
     icon: "◷",
     title: "Contract & temporary",
-    text: "Get the right expertise when you need it, with the flexibility to keep work moving.",
+    text: "Respond to changing business needs with flexible recruitment solutions. Whether you need short-term support, specialist expertise, or additional resources for a particular project, we help you explore talent options that align with your timelines and objectives.",
   },
   {
     no: "04",
     icon: "⌘",
     title: "Volume hiring",
-    text: "Scale your teams with a thoughtful, consistent approach to high-volume recruitment.",
+    text: "Grow your workforce with a structured approach to high-volume recruitment. We help businesses manage large-scale hiring requirements, identify suitable applicants, and maintain a consistent candidate experience throughout the recruitment process.",
   },
 ];
 
@@ -336,9 +336,15 @@ function Approach() {
             <em>More meaning.</em>
           </h2>
           <p>
-            Great recruitment isn’t about filling a seat. It’s about
-            understanding people, seeing potential, and making connections that
-            last.
+            Great recruitment is about more than filling a vacancy. It starts with
+
+  understanding the business, the people behind it, and the goals everyone
+
+  wants to achieve. We take a considered approach to connecting employers
+
+  and candidates, helping both sides understand expectations and explore
+
+  opportunities that make sense for the long term.
           </p>
           <a href="#about" className="button button-light">
             Get to know us <Arrow diagonal />
@@ -392,8 +398,13 @@ function About() {
             <span>Always.</span>
           </h2>
           <p>
-            We’re a recruitment partner built around a simple idea: when people
-            and opportunities find the right fit, everyone moves forward.
+            Easy Recruiitz 365 is built around the belief that successful recruitment
+
+  starts with understanding people. We connect businesses with professionals
+
+  whose skills, ambitions, and values align with the opportunities available.
+
+  Our goal is to make hiring more thoughtful and job searching more meaningful.
           </p>
           <p>
             We take the time to understand what matters — to the business, to
@@ -459,9 +470,9 @@ function FeaturedJobs() {
 
           <div className="section-heading-aside">
             <p>
-              Your next opportunity could be closer than you think.
+Your next opportunity could be closer than you think.
               Explore roles that match your skills and ambitions.
-            </p>
+</p>
             <a href="#contact" className="text-link">
               Find your next role <Arrow diagonal />
             </a>
@@ -651,28 +662,38 @@ function Testimonials() {
 function FAQ() {
   const [active, setActive] = useState(0);
 
-  const questions = [
-    {
-      question: "How can Easy Recruiitz help employers?",
-      answer:
-        "We help businesses identify recruitment needs and connect with candidates whose skills align with their requirements.",
-    },
-    {
-      question: "How can I find job opportunities?",
-      answer:
-        "Explore available vacancies and contact our team to discuss suitable opportunities.",
-    },
-    {
-      question: "What recruitment services do you offer?",
-      answer:
-        "Our services include permanent staffing, executive search, contract staffing, and volume hiring.",
-    },
-    {
-      question: "How can I contact your team?",
-      answer:
-        "Use the contact form at the bottom of this page to tell us about your recruitment or career needs.",
-    },
-  ];
+const questions = [
+  {
+    question: "How can Easy Recruiitz 365 help employers?",
+    answer:
+      "We help employers understand their recruitment requirements and explore suitable talent for their organizations. Our services include permanent staffing, executive search, contract and temporary recruitment, and volume hiring. We aim to connect businesses with candidates whose skills and experience align with their requirements and workplace expectations.",
+  },
+  {
+    question: "How can I find job opportunities?",
+    answer:
+      "You can explore the opportunities featured on our website and contact our team to discuss your career interests. Sharing your skills, experience, preferred role, and location can help us understand what you are looking for. Specific opportunities depend on current vacancies and employer requirements.",
+  },
+  {
+    question: "What recruitment services do you offer?",
+    answer:
+      "Our recruitment services cover permanent staffing, executive search, contract and temporary staffing, and volume hiring. These services are designed to support different business requirements, from finding an individual specialist to identifying talent for larger recruitment needs.",
+  },
+  {
+    question: "How do you help candidates find suitable roles?",
+    answer:
+      "We encourage candidates to consider their skills, experience, career goals, and preferred working environment when exploring opportunities. By understanding these factors alongside employer requirements, we aim to facilitate more relevant connections between candidates and organizations.",
+  },
+  {
+    question: "Can businesses contact you for specific hiring needs?",
+    answer:
+      "Yes. Businesses can use the contact form to describe their hiring requirements, the positions they need to fill, and any relevant timelines. Our team can then review the information and discuss the most appropriate recruitment approach.",
+  },
+  {
+    question: "How can I contact Easy Recruiitz 365?",
+    answer:
+      "Use the contact form on this page to share your name, email address, and reason for reaching out. Whether you are an employer, a job seeker, or a potential partner, provide a few details about your needs so the team can understand your enquiry.",
+  },
+];
 
   return (
     <section className="section faq-section" id="faq">

@@ -140,7 +140,7 @@ a {
   font-size: 24px;
 }
 .hero {
-  padding: 64px 0 24px;
+  padding: 4px 0 24px;
   overflow: hidden;
 }
 .hero-grid {
@@ -1354,7 +1354,7 @@ h1 span {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 64px;
+  margin-bottom:14px;
   font-size: 12px;
   color: #777b72;
 }
