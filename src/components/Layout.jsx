@@ -111,7 +111,7 @@ function Footer() {
     <footer className="footer">
       <div className="container footer-main">
         <div>
-          <Brand light />
+          {/* <Brand light /> */}
           <p className="footer-tagline">
             Better connections.
             <br />
