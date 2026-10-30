@@ -13,8 +13,7 @@ export function Brand({ light = false }) {
         <img src="/assets/logo.png" alt="" width="44" height="44" />
       </span>
       <span className="brand-word">
-        easy<span>recruiitz</span>
-        <small>365</small>
+          Easy Recruiitz 365
       </span>
     </Link>
   );
